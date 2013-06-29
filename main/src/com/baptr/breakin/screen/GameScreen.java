@@ -23,8 +23,6 @@ public class GameScreen extends AbstractScreen {
     protected Avatar paddle;
     protected Array<Entity> entities;
 
-    protected PathMarker pathMarker;
-
     protected static final int INITIAL_DEFENSE_CAPACITY = 64;
     
     public GameScreen(BreakIn game, String mapName) {
@@ -36,15 +34,10 @@ public class GameScreen extends AbstractScreen {
         Controllers.addListener(new ControllerInputProcessor(this));
         assetManager.finishLoading();
 
-        paddle = new Avatar(15, -64, getAtlas());
+        paddle = new Avatar(0, -480, getAtlas());
         entities = new Array<Entity>(false, INITIAL_DEFENSE_CAPACITY + 2);
         entities.add(paddle);
-        pathMarker = new PathMarker(getAtlas().findRegion("gamescreen/marker"));
         GameUI ui = new GameUI(this, stage);
-    }
-
-    public PathMarker getPathMarker() {
-        return pathMarker;
     }
 
     public Avatar getPlayer() {

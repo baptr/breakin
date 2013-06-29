@@ -39,9 +39,9 @@ public class ControllerInputProcessor implements ControllerListener {
             if(axisCode == 0) {
                 player.setControlX(value);
             } else if(axisCode == 1) {
-                player.setControlY(-1*value);
+                player.setControlY(value);
             } else {
-                screen.log("Controller axisMoved %d to %f", axisCode, value);
+                //screen.log("Controller axisMoved %d to %f", axisCode, value);
             }
         } else {
             player = screen.getPlayer();

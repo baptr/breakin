@@ -50,7 +50,7 @@ public class BreakIn extends Game {
         Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
         Gdx.app.log(BreakIn.LOG, "Version 0.1 starting");
-        if(CHECK_FPS) Gdx.graphics.setVSync(false);
+        Gdx.graphics.setVSync(false);
 
         manager.finishLoading();
 
