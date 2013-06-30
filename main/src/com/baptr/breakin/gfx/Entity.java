@@ -122,4 +122,12 @@ public class Entity extends Sprite implements Comparable<Entity>{
         return true;
     }
 
+    public boolean onScreen() {
+        float x = getX();
+        float y = getY();
+        float half_width = Gdx.graphics.getWidth() / 2;
+        float half_height = Gdx.graphics.getHeight() / 2;
+        return x >= -half_width && x <= half_width && y >= -half_height && y <= half_height;
+    }
+
 }

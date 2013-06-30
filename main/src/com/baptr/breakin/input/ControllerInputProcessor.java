@@ -25,6 +25,8 @@ public class ControllerInputProcessor implements ControllerListener {
     public boolean buttonDown (Controller controller, int buttonCode) {
         screen.log("Controller down %d", buttonCode);
 
+        player.fire();
+
         return false;
     }
 
@@ -40,9 +42,12 @@ public class ControllerInputProcessor implements ControllerListener {
                 player.setControlX(value);
             } else if(axisCode == 1) {
                 player.setControlY(value);
-            } else {
-                //screen.log("Controller axisMoved %d to %f", axisCode, value);
+            } else if(axisCode == 2) {
+                player.setAimX(value);
+            } else if(axisCode == 3) {
+                player.setAimY(value);
             }
+            //screen.log("Controller axisMoved %d to %f", axisCode, value);
         } else {
             player = screen.getPlayer();
         }
