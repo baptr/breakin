@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="40" height="40" tilewidth="60" tileheight="30">
+ <tileset firstgid="1" name="terrain" tilewidth="62" tileheight="31">
+  <image source="terrain.png" width="186" height="93"/>
+  <tile id="0">
+   <properties>
+    <property name="TileType" value="BASIC"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="TileType" value="BASIC"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="TileType" value="WATER"/>
+    <property name="passable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="TileType" value="BASIC"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="TileType" value="FOREST"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="10" name="towers" tilewidth="64" tileheight="64">
+  <image source="towers.png" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="TileType" value="TOWER"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="11" name="widgets" tilewidth="62" tileheight="62">
+  <image source="widgets.png" width="248" height="62"/>
+  <tile id="0">
+   <properties>
+    <property name="TileType" value="FOREST"/>
+    <property name="weight" value="2"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="TileType" value="FOREST"/>
+    <property name="weight" value="3"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="TileType" value="FOREST"/>
+    <property name="weight" value="5"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="TileType" value="MOUNTAIN"/>
+    <property name="passable" value="0"/>
+    <property name="weight" value="32"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Terrain" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJy9l9uOgzAQQykFuv//xatKG8my7BknoH0YUUEzOfHc4LVt22vRPjfWfu0dWLX+/LM7DOhrhfEkqxiTM6m11Rln+FId33RV+z0V506/KtacJytsHeMOdjffmG2Wt+Nj63L7aVN8hzBmnNV1b55X/hI+ZuQcZd+KR91Lz5nwMWfCeG4130qcO76EUdXW9971z3yKkWOHzDNM/P8ZPma8CsZqzx2uXc+Y5UPGixhTfbAf4Jku8omMM3zMiHt19cr9lO8jJ/pY5Rv+0nzr+JDxCb7hl/1xT+caV8/w+ZN8yp/TMa3nVb6q1tCnq1mucVVb494Fe6zy4f5ce7u5qh7kamr4xD2dTo6N6y6Ze+lvPOuMqfOOGHPuuD7SaYn1kzK5/D7hGTO675nunqrt9P25en/FOXCHj1mq2k+/TZhPzatuvaslnldVD+gs0bDSxPGlNeXqzMU4iW+ia5X3mBMuh5Mc4/Ok3ylKB8WH10pLFd/ZPHR5z/6SHuP0ZM3TOCa1OFsX3E/TOVbxJd8vrF931m7W8mxQ69y7WxV3xadyUK1xmqmZl8Rf+er+wzmr8gXj3+nhcr6ahTv5m+1lLrbVmsPwVf0j0To9R7XfS/CpdRVLp4H6HmFul9dD58M8d+98XezSmFdnxPwbjFUsZ/dNmNTscj0AdVRa8Dyp3qldPnztx7C5tb+drw6s
+  </data>
+ </layer>
+ <layer name="Flavor" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztls0OxCAIhL1b+/6PuzFdEpZoy89QPeyXmJ4cBhBtKes4FWs1SH8ZOWXU7xTfUTyUxwhSJ5pz9vmTetYYO84HZ3d/nd39dd7ydzj3ZfjrXlr59dScWmh/5E3689avE/En6yI9eevGifqLeqjlyoXXXtY/0t/2jWHhqd+IvKWeJb7mPCL9VaOept5If6QXmdORHhJrDTVk6O2sye8GZK9RWvIOkzzNBTKnuxizN64v611JexFQ7NE7gOyR1Y+kTdZR4mcTMSujt5QvT4+J2XtqzfluTiK6WjRvLPqe0TKKOaq5956ZUQ17PTG8vlA9QL9taF2ZZ2ROOVl5I/zR/z9SM6KD+Pd+mx09WVjp33Ln/VkDoj8fgFgKlw==
+  </data>
+ </layer>
+ <objectgroup name="Spawns and Ends" width="40" height="40">
+  <object name="Spawn0" type="Spawn" x="450" y="0" width="30" height="30">
+   <properties>
+    <property name="Wave0_SpawnRate" value="1"/>
+    <property name="Wave0_SpawnTypes" value="1,0x2, (1), (2)x3, (2,3), (2x5), (3x5)x2, (1,2x5), (1,2,3x3)x2"/>
+    <property name="Wave1_SpawnRate" value="3"/>
+    <property name="Wave1_SpawnTypes" value="(1,3,2x3),0x2,1,2,1,2"/>
+   </properties>
+  </object>
+  <object name="End0" type="End" x="840" y="1170" width="30" height="30"/>
+ </objectgroup>
+</map>
