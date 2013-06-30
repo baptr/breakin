@@ -1,7 +1,7 @@
 <project name="custom_rules">
     <import file="../main/common_build.xml" />
 
-    <target name="-post-compile" depends="pack-maps,pack-textures" />
+    <target name="-post-compile" depends="pack-textures" />
 
     <!-- Compiles this project's .java files into .class files. -->
     <target name="-compile" depends="-build-setup, -pre-build, -code-gen, -pre-compile">

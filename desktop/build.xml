@@ -44,7 +44,7 @@
         </javac>
     </target>
 
-    <target name="dist" depends="compile,pack-maps,pack-textures">
+    <target name="dist" depends="compile,pack-textures">
         <jar 
             destfile="${out.absolute.dir}/${projname}.jar"
             basedir="${out.classes.absolute.dir}">
@@ -72,7 +72,7 @@
         <java jar="${out.absolute.dir}/${projname}.jar" fork="true"/>
     </target>
 
-    <target name="run" depends="compile,pack-maps,pack-textures">
+    <target name="run" depends="compile,pack-textures">
         <path id="java.classpath">
             <fileset dir="${libs.absolute.dir}">
                 <include name="**/*.jar" />
@@ -91,7 +91,7 @@
         </java>
     </target>
 	
-    <target name="splash-run" depends="compile,pack-maps,pack-textures">
+    <target name="splash-run" depends="compile,pack-textures">
         <path id="java.classpath">
             <fileset dir="${libs.absolute.dir}">
                 <include name="**/*.jar" />
