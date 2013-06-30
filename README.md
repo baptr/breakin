@@ -1,6 +1,6 @@
-Operation: Darkshaft
+BreakIn: The Sheepening<br>_Little Bo Peep's Revenge_
 ====================
-Cooperative multi-player, persistent progression, cross-platform Tower-D.
+Android game (more to come)
 
 Building and Running
 --------------------
@@ -8,8 +8,8 @@ Building and Running
 ### Desktop
 Desktop builds should be easy.
 
-    $ git clone https://github.com/baptr/darkshaft.git
-    $ cd darkshaft/desktop
+    $ git clone https://github.com/baptr/breakin.git
+    $ cd breakin/desktop
     $ ant run
 
 ### Android
@@ -18,8 +18,8 @@ If you don't already have the Android SDK, [download it](http://developer.androi
 
 Once that's done, the build itself isn't too bad...
 
-    $ git clone https://github.com/baptr/darkshaft.git
-    $ cd darkshaft/android
+    $ git clone https://github.com/baptr/breakin.git
+    $ cd breakin/android
     $ echo "sdk.dir=/LOCATION/OF/UNPACKED/ANDROID/SDK" >> local.properties
     $ ant debug
 
@@ -41,9 +41,9 @@ There are a couple steps to get everything set up and imported into an eclipse w
 ##### Download code
 
 * File > Import > Git > Projects from Git > URI
-* Copy git url in the URI box `https://github.com/<username>/darkshaft.git`
+* Copy git url in the URI box `https://github.com/<username>/breakin.git`
 * Click Next a few times
-* Import existing projects > Check Darkshaft
+* Import existing projects > Check Breakin
 * Read through [this EGit documentation](http://www.vogella.com/articles/EGit/article.html) for more info
 
 ##### Set up JDK
@@ -63,5 +63,3 @@ There are a couple steps to get everything set up and imported into an eclipse w
 
 Credits
 -------
-
-Some tile art inspired by David E. Gervais's [Dungeon Odissey tiles](http://pousse.rapiere.free.fr/tome/tome-tiles.htm)
