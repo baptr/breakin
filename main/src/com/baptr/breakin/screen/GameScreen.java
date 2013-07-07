@@ -16,6 +16,7 @@ import com.baptr.breakin.input.*;
 import com.baptr.breakin.screen.AbstractScreen;
 import com.baptr.breakin.gfx.*;
 import com.baptr.breakin.entity.Entity.*;
+import com.baptr.breakin.domain.*;
 
 public class GameScreen extends AbstractScreen {
     protected Color bgColor = new Color(0f, 0f, 0.5f, 1f);
@@ -37,13 +38,18 @@ public class GameScreen extends AbstractScreen {
         paddle = new Avatar(0, -480, getAtlas());
         entities = new Array<Entity>(false, INITIAL_DEFENSE_CAPACITY + 2);
         entities.add(paddle);
+
+        entities.add(new Ring(100f, 8, getAtlas()));
+        entities.add(new Ring(200f, 16, getAtlas()));
+        entities.add(new Ring(300f, 32, getAtlas()));
+
         GameUI ui = new GameUI(this, stage);
     }
 
     public Avatar getPlayer() {
         return paddle;
     }
-
+//hello Bryce!!!
     @Override
     public void update(float delta) {
         super.update(delta);

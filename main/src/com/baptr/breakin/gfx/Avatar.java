@@ -55,7 +55,7 @@ public class Avatar extends Unit {
         Vector2 newpos = new Vector2(getX() + v.x * speed * delta,
                 getY() - v.y * speed * delta);
         Vector2 dir = new Vector2(newpos).nor();
-        if( aim_in.len() > 0.25 ) {
+        if( aim_in.len() > 0.75 ) {
             aim.set(aim_in).nor();
             aim_r = 360f - aim.angle() - dir.angle();;
         }

@@ -50,6 +50,8 @@ public class Entity extends Sprite implements Comparable<Entity>{
         this.setPosition(x, y);
     }
 
+    public Entity() {
+    }
     
     public void setAnimation(String animPath) { //TODO Enum
         currentAnimation = animations.get(animPath);
